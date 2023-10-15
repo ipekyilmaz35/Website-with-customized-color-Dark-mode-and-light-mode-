@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+    /* overflow: hidden; */
+}
+
+:root{
+    --white: #fff;
+    --black: #24292d;
+    --nav-main: #4070f4;
+    --swithers-main: #0b3cc1;
+    --light-bg: #f0f8ff;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    background: var(--nav-main);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+nav .navbar{
+    max-width: 1300px;
+    height: 100%;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.navbar .nav-links{
+    display: flex;
+}
+
+.nav-links li{
+    list-style-type: none;
+    margin: 0 8px;
+    display: flex;
+}
+
+.nav-links li a{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.navbar .appearance{
+    display: flex;
+    align-items: center;
+}
+
+.appearance .light-dark,
+.appearance .icons{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 6px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.appearance .light-dark:hover{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.1) ;
+}
+
+.appearance .light-dark i{
+    width: 100%;
+    height: 100%;
+}
+
+.appearance .color-icon{
+    position: relative;
+}
+
+.appearance .icons{
+    width: 70px;
+    height: 50px;
+    margin-left: 14px;
+}
+
+.appearance .color-box{
+    background-color: var(--white);
+    position: absolute;
+    bottom: -133px;
+    right: 0;
+    min-height: 100px;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.2) ;
+    padding: 16px 20px 20px 20px;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.color-box::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    right: 30px;
+    background-color: var(--white);
+    top: -10px;
+    right: 20px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.color-icon.open .color-box{
+    opacity: 10;
+    pointer-events: auto;
+}
+
+.color-icon.open .arrow{
+    transform: rotate(-180deg);
+}
+
+.appearance .color-box h3{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    color: var(--nav-main);
+    text-align: left;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.appearrance .color-box .color-switchers{
+    display: flex;
+}
+
+.color-box .color-switchers .btn{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    background: #4070f4;
+}
+
+.color-switchers .btn.blue.active{
+    box-shadow: 0 0 0 2px #fff, 
+                0 0 0 4px #4070f4;
+}
+
+.color-switchers .btn.orange{
+    background: #f79f1f;
+}
+
+.color-switchers .btn.orange.active{
+    box-shadow: 0 0 0 2px #fff, 
+                0 0 0 4px #f79f1f;
+}
+
+.color-switchers .btn.purple{
+    background: #8e44ad;
+}
+
+.color-switchers .btn.purple.active{
+    box-shadow: 0 0 0 2px #fff, 
+                0 0 0 4px #8e44ad;
+}
+
+.color-switchers .btn.green{
+    background: #3a9943;
+}
+
+.color-switchers .btn.green.active{
+    box-shadow: 0 0 0 2px #fff, 
+                0 0 0 4px #3a9943;
+}
+
+.home-content{
+    width: 100%;
+    height: 100vh;
+    background: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;
+}
+
+.home-content h2{
+    color: var(--black);
+    font-size: 50px;
+}
+
+.home-content h3{
+    font-size: 42px;
+    color: var(--black);
+    margin-top: -8px;
+}
+
+.home-content h3 span{
+    color: var(--nav-main);
+}
+
+.home-content h3 span.darkMode{
+    color: var(--black);
+}
+
+.home-content p{
+    color: var(--black);
+    font-size: 16px;
+    width: 45%;
+    text-align: justify;
+    margin: 4px 0 30px 0;
+}
+
+.home-content a{
+    color: white;
+    background: var(--nav-main);
+    font-size: 20px;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.home-content a i{
+    font-size: 16px;
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
